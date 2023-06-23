@@ -26,7 +26,7 @@ Provide instructions on how to install and use the project. Include steps to set
 
 ```
 git clone https://github.com/shonshchori/PropertiesPricePrediction/tree/master
-cd property-price-prediction
+cd PropertiesPricePrediction
 ```
 
 
