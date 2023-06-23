@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, DateField, SelectField, IntegerField
+from wtforms import StringField, SubmitField, DateField, SelectField, IntegerField, BooleanField
 from wtforms.validators import DataRequired
 import pickle
 import os
@@ -36,14 +36,14 @@ class PredictForm(FlaskForm):
     number_in_street = StringField("Street Number", validators=[DataRequired()])
     city_area = StringField("Neighborhood", validators=[DataRequired()])
     num_of_images = IntegerField("Images No.", validators=[DataRequired()])
-    hasElevator = StringField("Elevator", validators=[DataRequired()])
-    hasParking = StringField("Parking", validators=[DataRequired()])
-    hasBars = StringField("Bars", validators=[DataRequired()])
-    hasStorage = StringField("Storage", validators=[DataRequired()])
-    hasAirCondition = StringField("AirCondition", validators=[DataRequired()])
-    hasBalcony = StringField("Balcony", validators=[DataRequired()])
-    hasMamad = StringField("Mamad", validators=[DataRequired()])
-    handicapFriendly = StringField("Handicap Friendly", validators=[DataRequired()])
+    hasElevator = BooleanField("Elevator")
+    hasParking = BooleanField("Parking")
+    hasBars = BooleanField("Bars")
+    hasStorage = BooleanField("Storage")
+    hasAirCondition = BooleanField("AirCondition")
+    hasBalcony = BooleanField("Balcony")
+    hasMamad = BooleanField("Mamad")
+    handicapFriendly = BooleanField("Handicap Friendly")
     condition = SelectField("Condition", choices=[('שמור', 'שמור'), ('חדש', 'חדש'), ('משופץ', 'משופץ'),
                                               ('לא צויין', 'לא צויין'), ('ישן', 'ישן'),
                                               ('דורש שיפוץ', 'דורש שיפוץ')] , validate_choice=True)

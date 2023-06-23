@@ -16,17 +16,17 @@
     <p><u><strong>Additional Features:</strong></u></p>
     <div style="display: flex; background-color: #f5f5f5; padding: 10px;">
         <div style="width: 50%;">
-            <p><strong>Elevator:</strong> {% if hasElevator == '1' %}Yes{% else %}No{% endif %}</p>
-            <p><strong>Parking:</strong> {% if hasParking == '1' %}Yes{% else %}No{% endif %}</p>
-            <p><strong>Bars:</strong> {% if hasBars == '1' %}Yes{% else %}No{% endif %}</p>
-            <p><strong>Storage:</strong> {% if hasStorage == '1' %}Yes{% else %}No{% endif %}</p>
-            <p><strong>Air Condition:</strong> {% if hasAirCondition == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Elevator:</strong> {% if hasElevator %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Parking:</strong> {% if hasParking %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Bars:</strong> {% if hasBars %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Storage:</strong> {% if hasStorage %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Air Condition:</strong> {% if hasAirCondition %}Yes{% else %}No{% endif %}</p>
 
         </div>
         <div style="width: 50%;">
-            <p><strong>Balcony:</strong> {% if hasBalcony == '1' %}Yes{% else %}No{% endif %}</p>
-            <p><strong>Mamad:</strong> {% if hasMamad == '1' %}Yes{% else %}No{% endif %}</p>
-            <p><strong>Handicap Friendly:</strong> {% if handicapFriendly == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Balcony:</strong> {% if hasBalcony %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Mamad:</strong> {% if hasMamad %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Handicap Friendly:</strong> {% if handicapFriendly %}Yes{% else %}No{% endif %}</p>
             <p><strong>Shopping Center:</strong> {% if hasShopping == 1 %}Yes{% else %}No{% endif %}</p>
             <p><strong>Education Close:</strong> {% if hasEducation == 1 %}Yes{% else %}No{% endif %}</p>
         </div>
@@ -91,40 +91,6 @@
                 </div>
                 <div style="width: 33%;">
                     <div align="left" class="col-md-6">
-                        {{ form.hasElevator.label(class="form-label") }}
-                        {{ form.hasElevator(class="form-control") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasParking.label(class="form-label") }}
-                        {{ form.hasParking(class="form-control") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasBars.label(class="form-label") }}
-                        {{ form.hasBars(class="form-control") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasStorage.label(class="form-label") }}
-                        {{ form.hasStorage(class="form-control") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasAirCondition.label(class="form-label") }}
-                        {{ form.hasAirCondition(class="form-control") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasBalcony.label(class="form-label") }}
-                        {{ form.hasBalcony(class="form-control") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasMamad.label(class="form-label") }}
-                        {{ form.hasMamad(class="form-control") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.handicapFriendly.label(class="form-label") }}
-                        {{ form.handicapFriendly(class="form-control") }}
-                    </div>
-                </div>
-                <div style="width: 33%;">
-                    <div align="left" class="col-md-6">
                         {{ form.condition.label(class="form-label") }}
                         {{ form.condition(class="form-control") }}
                     </div>
@@ -147,6 +113,41 @@
                     <div align="left" class="col-md-6">
                         {{ form.total_floors.label(class="form-label") }}
                         {{ form.total_floors(class="form-control") }}
+                    </div>
+                </div>
+                <div style="width: 33%;">
+                    <p><strong><u>Additional Features:</u></strong></p>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasElevator(class="form-check-input") }}
+                        {{ form.hasElevator.label(class="form-check-label") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasParking(class="form-check-input") }}
+                        {{ form.hasParking.label(class="form-check-label") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasBars(class="form-check-input") }}
+                        {{ form.hasBars.label(class="form-check-label") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasStorage(class="form-check-input") }}
+                        {{ form.hasStorage.label(class="form-check-label") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasAirCondition(class="form-check-input") }}
+                        {{ form.hasAirCondition.label(class="form-check-label") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasBalcony(class="form-check-input") }}
+                        {{ form.hasBalcony.label(class="form-check-label") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasMamad(class="form-check-input") }}
+                        {{ form.hasMamad.label(class="form-check-label") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.handicapFriendly(class="form-check-input") }}
+                        {{ form.handicapFriendly.label(class="form-check-label") }}
                     </div>
                 </div>
             </div>
