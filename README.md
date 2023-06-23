@@ -2,6 +2,10 @@
 
 This project focuses on predicting property prices using a machine learning model. It includes exploratory data analysis (EDA), preprocessing of the data, training an ElasticNet model, and creating a Flask application for predicting property prices based on user input.
 
+<p align="center">
+  <img width="1000" height="300" src="https://upload.wikimedia.org/wikipedia/commons/3/36/Lower_Manhattan_from_Jersey_City_November_2014_panorama_1.jpg">
+</p>
+
 ## Features
 
 ### Exploratory Data Analysis (EDA)
