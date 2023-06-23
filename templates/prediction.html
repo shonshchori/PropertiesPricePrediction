@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Property Submission</title>
+<center xmlns:margin-right="http://www.w3.org/1999/xhtml">
+{% if city %}
+
+
+<body>
+    <h5>Thanks for submitting your property!</h5><br />
+    <h2>The Predicted price is <strong> {{ prediction }} </strong></h2><br />
+    <div style="background-color: #f5f5f5; padding: 10px;">
+    <h3><strong>{{ street }} {{ number_in_street }}, {{ city_area }}, {{ city }}</strong></h3>
+        <h5><strong>{{ prop_type }}</strong> עם <strong>{{ room_number }}</strong> חדרים בשטח של <strong>{{ area }}</strong> מ"ר</h5>
+        <p>{{ description }}</p>
+    </div><br />
+    <p><u><strong>Additional Features:</strong></u></p>
+    <div style="display: flex; background-color: #f5f5f5; padding: 10px;">
+        <div style="width: 50%;">
+            <p><strong>Elevator:</strong> {% if hasElevator == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Parking:</strong> {% if hasParking == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Bars:</strong> {% if hasBars == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Storage:</strong> {% if hasStorage == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Air Condition:</strong> {% if hasAirCondition == '1' %}Yes{% else %}No{% endif %}</p>
+
+        </div>
+        <div style="width: 50%;">
+            <p><strong>Balcony:</strong> {% if hasBalcony == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Mamad:</strong> {% if hasMamad == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Handicap Friendly:</strong> {% if handicapFriendly == '1' %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Shopping Center:</strong> {% if hasShopping == 1 %}Yes{% else %}No{% endif %}</p>
+            <p><strong>Education Close:</strong> {% if hasEducation == 1 %}Yes{% else %}No{% endif %}</p>
+        </div>
+    </div>
+    <br />
+    <p><u><strong>Other Details:</strong></u></p>
+    <div style="display: flex; background-color: #f5f5f5; padding: 10px;">
+        <div style="width: 50%;">
+            <p><strong>Condition:</strong> {{ condition }}</p>
+            <p><strong>Entrance Date:</strong> {{ entranceDate }}</p>
+        </div>
+        <div style="width: 50%;">
+            <p><strong>Furniture:</strong> {{ furniture }}</p>
+            <p><strong>Property Floor:</strong> קומה {{ floor }} מתוך {{ total_floors }}</p>
+        </div>
+    </div>
+</body>
+
+
+{% else %}
+    <h1>Submit Your Property Here!</h1>
+    <h2>Please Enter Property Details:</h2>
+    <br/>
+        <form method="POST">
+            <div style="display: flex; padding: 10px;">
+                <div style="width: 33%;">
+                    {{ form.hidden_tag() }}
+                    <div align="left" class="col-md-6">
+                        <!-- The label from the PredictForm class -->
+                        {{ form.city.label(class="form-label") }}
+                        <!-- The field from the PredictForm class -->
+                        {{ form.city(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.prop_type.label(class="form-label") }}
+                        {{ form.prop_type(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.room_number.label(class="form-label") }}
+                        {{ form.room_number(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.area.label(class="form-label") }}
+                        {{ form.area(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.street.label(class="form-label") }}
+                        {{ form.street(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.number_in_street.label(class="form-label") }}
+                        {{ form.number_in_street(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.city_area.label(class="form-label") }}
+                        {{ form.city_area(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.num_of_images.label(class="form-label") }}
+                        {{ form.num_of_images(class="form-control") }}
+                    </div>
+                </div>
+                <div style="width: 33%;">
+                    <div align="left" class="col-md-6">
+                        {{ form.hasElevator.label(class="form-label") }}
+                        {{ form.hasElevator(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasParking.label(class="form-label") }}
+                        {{ form.hasParking(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasBars.label(class="form-label") }}
+                        {{ form.hasBars(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasStorage.label(class="form-label") }}
+                        {{ form.hasStorage(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasAirCondition.label(class="form-label") }}
+                        {{ form.hasAirCondition(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasBalcony.label(class="form-label") }}
+                        {{ form.hasBalcony(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.hasMamad.label(class="form-label") }}
+                        {{ form.hasMamad(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.handicapFriendly.label(class="form-label") }}
+                        {{ form.handicapFriendly(class="form-control") }}
+                    </div>
+                </div>
+                <div style="width: 33%;">
+                    <div align="left" class="col-md-6">
+                        {{ form.condition.label(class="form-label") }}
+                        {{ form.condition(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.entranceDate.label(class="form-label") }}
+                        {{ form.entranceDate(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.furniture.label(class="form-label") }}
+                        {{ form.furniture(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.publishedDays.label(class="form-label") }}
+                        {{ form.publishedDays(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.floor.label(class="form-label") }}
+                        {{ form.floor(class="form-control") }}
+                    </div>
+                    <div align="left" class="col-md-6">
+                        {{ form.total_floors.label(class="form-label") }}
+                        {{ form.total_floors(class="form-control") }}
+                    </div>
+                </div>
+            </div>
+            <div align="left" class="col-md-6">
+                        {{ form.description.label(class="form-label") }}
+                        {{ form.description(class="form-control") }}
+            </div>
+            </br>
+            {{ form.submit(class="btn btn-secondary") }}
+        </form>
+{% endif %}
+</center>
+{% endblock %}

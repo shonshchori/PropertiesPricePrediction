@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <title>Properties Prediction App</title>
+    <style>
+        .team {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .member img {
+            width: 250px;
+            height: auto;
+        }
+        .member h3 {
+            margin-top: 10px;
+        }
+    </style>
+    <section id="about-us">
+        <div align='center' class="container">
+            <h1>About Us</h1>
+            <br />
+            <div class="team">
+                <div class="member">
+                    <img src="{{url_for('static', filename='shon.jpg')}}" alt="Shon" />
+                    <h3>Shon</h3>
+                    <p>Passionate about coding and problem-solving, Shon brings a wealth of experience to our team. With a keen eye for detail and a strong commitment to delivering high-quality work, he ensures our projects are executed flawlessly.</p>
+                </div>
+                <div class="member">
+                    <img src="{{url_for('static', filename='bnaya.jpg')}}" alt="Bnaya" />
+                    <h3>Bnaya</h3>
+                    <p>Bnaya is a creative genius who excels in design and user experience. With a deep understanding of the latest trends and technologies, he crafts visually stunning and intuitive interfaces that captivate our users and enhance their journey.</p>
+                </div>
+            </div>
+            <br />
+            <h2>Behind the scenes</h2>
+            <img src="{{url_for('static', filename='team.jpg')}}" style="width: 600px; height: auto;" align="middle" alt="team" /><br /><br />
+        </div>
+    </section>
+
+{% endblock %}
