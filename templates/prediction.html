@@ -117,46 +117,48 @@
                 </div>
                 <div style="width: 33%;">
                     <p><strong><u>Additional Features:</u></strong></p>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasElevator(class="form-check-input") }}
-                        {{ form.hasElevator.label(class="form-check-label") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasParking(class="form-check-input") }}
-                        {{ form.hasParking.label(class="form-check-label") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasBars(class="form-check-input") }}
-                        {{ form.hasBars.label(class="form-check-label") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasStorage(class="form-check-input") }}
-                        {{ form.hasStorage.label(class="form-check-label") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasAirCondition(class="form-check-input") }}
-                        {{ form.hasAirCondition.label(class="form-check-label") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasBalcony(class="form-check-input") }}
-                        {{ form.hasBalcony.label(class="form-check-label") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.hasMamad(class="form-check-input") }}
-                        {{ form.hasMamad.label(class="form-check-label") }}
-                    </div>
-                    <div align="left" class="col-md-6">
-                        {{ form.handicapFriendly(class="form-check-input") }}
-                        {{ form.handicapFriendly.label(class="form-check-label") }}
-                    </div>
-                </div>
+                    <div class="row">
+                        <div align="left" class="col-md-6">
+                            {{ form.hasElevator(class="form-check-input") }}
+                            {{ form.hasElevator.label(class="form-check-label") }}
+                        </div>
+                        <div align="left" class="col-md-6">
+                            {{ form.hasParking(class="form-check-input") }}
+                            {{ form.hasParking.label(class="form-check-label") }}
+                        </div>
+                        <div align="left" class="col-md-6">
+                            {{ form.hasBars(class="form-check-input") }}
+                            {{ form.hasBars.label(class="form-check-label") }}
+                        </div>
+                        <div align="left" class="col-md-6">
+                            {{ form.hasStorage(class="form-check-input") }}
+                            {{ form.hasStorage.label(class="form-check-label") }}
+                        </div>
+                        <div align="left" class="col-md-6">
+                            {{ form.hasAirCondition(class="form-check-input") }}
+                            {{ form.hasAirCondition.label(class="form-check-label") }}
+                        </div>
+                        <div align="left" class="col-md-6">
+                            {{ form.hasBalcony(class="form-check-input") }}
+                            {{ form.hasBalcony.label(class="form-check-label") }}
+                        </div>
+                        <div align="left" class="col-md-6">
+                            {{ form.hasMamad(class="form-check-input") }}
+                            {{ form.hasMamad.label(class="form-check-label") }}
+                        </div>
+                        <div align="left" class="col-md-6">
+                            {{ form.handicapFriendly(class="form-check-input") }}
+                            {{ form.handicapFriendly.label(class="form-check-label") }}
+                        </div>
+                    </div><br />
+                    <div class="form">
+                        {{ form.description.label(class="form-label", for="floatingTextarea2") }}
+                        {{ form.description(class="form-control", id="floatingTextarea2", style="height: 100px") }}
+                    </div><br />
+                    {{ form.submit(class="btn btn-secondary") }}
+                </div><br />
             </div>
-            <div align="left" class="col-md-6">
-                        {{ form.description.label(class="form-label") }}
-                        {{ form.description(class="form-control") }}
-            </div>
-            </br>
-            {{ form.submit(class="btn btn-secondary") }}
+
         </form>
 {% endif %}
 </center>

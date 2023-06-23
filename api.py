@@ -151,9 +151,16 @@ def prop_prediction():
                            description=description, prediction=prediction, hasShopping=hasShopping,
                            hasEducation=hasEducation, form=form)
 
+
 @app.route('/team')
 def about_us():
     return render_template('team.html')
+
+
+@app.route('/about')
+def about_the_project():
+    return render_template('about.html')
+
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
