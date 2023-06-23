@@ -1,8 +1,7 @@
-import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, render_template
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, DateField, SelectField, EmailField, IntegerField
-from wtforms.validators import DataRequired, Email
+from wtforms import StringField, SubmitField, DateField, SelectField, IntegerField
+from wtforms.validators import DataRequired
 import pickle
 import os
 import Data_Clean
