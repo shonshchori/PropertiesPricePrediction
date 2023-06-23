@@ -25,7 +25,7 @@ Provide instructions on how to install and use the project. Include steps to set
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/property-price-prediction.git
+git clone https://github.com/shonshchori/PropertiesPricePrediction/tree/master
 cd property-price-prediction
 ```
 
