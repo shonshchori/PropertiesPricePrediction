@@ -25,7 +25,7 @@ Provide instructions on how to install and use the project. Include steps to set
 1. Clone the repository:
 
 ```
-git clone https://github.com/shonshchori/PropertiesPricePrediction/tree/master
+git clone https://github.com/shonshchori/PropertiesPricePrediction/
 cd PropertiesPricePrediction
 ```
 
@@ -46,7 +46,7 @@ env\Scripts\activate  # for Windows
 
 3. Run the Flask application:
 
-`python app.py`
+`python api.py`
 
 
 4. Access the Flask application in your web browser:
