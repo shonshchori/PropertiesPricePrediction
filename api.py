@@ -6,7 +6,6 @@ from wtforms.validators import DataRequired, Email
 import pickle
 import os
 import Data_Clean
-import ClearNewData
 
 prop_model = pickle.load(open('properties_model.pkl', 'rb'))
 preprocessor = pickle.load(open('fitted_preprocessor.pkl', 'rb'))
