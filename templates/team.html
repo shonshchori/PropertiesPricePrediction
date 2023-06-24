@@ -21,6 +21,13 @@
         }
         .member h3 {
             margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .member h3 img {
+            width: 30px;
+            height: auto;
+            margin-right: 10px;
         }
     </style>
     <section id="about-us">
@@ -30,12 +37,22 @@
             <div class="team">
                 <div class="member">
                     <img src="{{url_for('static', filename='shon.jpg')}}" alt="Shon" />
-                    <h3>Shon</h3>
+                    <h3>
+                        Shon
+                        <a href="https://www.linkedin.com/in/shonshchori/" target="_blank">
+                            <img src="https://cdn.icon-icons.com/icons2/2201/PNG/512/linkedin_logo_square_icon_134016.png" alt="LinkedIn Logo">
+                        </a>
+                    </h3>
                     <p>Passionate about coding and problem-solving, Shon brings a wealth of experience to our team. With a keen eye for detail and a strong commitment to delivering high-quality work, he ensures our projects are executed flawlessly.</p>
                 </div>
                 <div class="member">
                     <img src="{{url_for('static', filename='bnaya.jpg')}}" alt="Bnaya" />
-                    <h3>Bnaya</h3>
+                    <h3>
+                        Bnaya
+                        <a href="https://www.linkedin.com/in/bnayaavivi/" target="_blank">
+                            <img src="https://cdn.icon-icons.com/icons2/2201/PNG/512/linkedin_logo_square_icon_134016.png" alt="LinkedIn Logo">
+                        </a>
+                    </h3>
                     <p>Bnaya is a creative genius who excels in design and user experience. With a deep understanding of the latest trends and technologies, he crafts visually stunning and intuitive interfaces that captivate our users and enhance their journey.</p>
                 </div>
             </div>
@@ -46,3 +63,4 @@
     </section>
 
 {% endblock %}
+
