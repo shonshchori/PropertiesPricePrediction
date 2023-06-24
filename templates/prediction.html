@@ -14,7 +14,7 @@
         <p>{{ description }}</p>
     </div><br />
     <p><u><strong>Additional Features:</strong></u></p>
-    <div class="border border-secondary" style="display: flex; background-color: #92b5e8; padding: 10px;">
+    <div class="border border-secondary" style="display: flex; padding: 10px;">
         <div style="width: 50%;">
             <p><strong>Elevator:</strong> {% if hasElevator %}Yes{% else %}No{% endif %}</p>
             <p><strong>Parking:</strong> {% if hasParking %}Yes{% else %}No{% endif %}</p>
@@ -33,7 +33,7 @@
     </div>
     <br />
     <p><u><strong>Other Details:</strong></u></p>
-    <div class="border border-secondary" style="display: flex; background-color: #92b5e8; padding: 10px;">
+    <div class="border border-secondary" style="display: flex;padding: 10px;">
         <div style="width: 50%;">
             <p><strong>Condition:</strong> {{ condition }}</p>
             <p><strong>Entrance Date:</strong> {{ entranceDate }}</p>
@@ -43,6 +43,7 @@
             <p><strong>Property Floor:</strong> קומה {{ floor }} מתוך {{ total_floors }}</p>
         </div>
     </div>
+    <br />
 </body>
 
 

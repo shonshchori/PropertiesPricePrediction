@@ -5,7 +5,7 @@
   <title>Property Price Prediction</title>
 </head>
 
-<body>
+<body style="background-color: #cfe2ff; background-image: url({{ url_for('static', filename='manhattan.jpg') }}); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed;">
   <h1>Property Price Prediction</h1>
 
   <p>
@@ -13,10 +13,12 @@
     (EDA), preprocessing of the data, training an ElasticNet model, and creating a Flask application for predicting property
     prices based on user input.
   </p>
-      <p align="center">
-        <img width="1000" height="300" src="https://loving-newyork.com/wp-content/uploads/2018/11/Things-to-do-in-Lower-Manhattan_160914155540054-1920px.jpg">
-      </p>
-    <h2>Features</h2><br />
+
+  <div class="text-center">
+    <img src="{{ url_for('static', filename='centralpark.jpeg') }}" alt="Central Park" class="img-fluid img-thumbnail" style="width: 800px; height: auto;">
+  </div><br />
+
+  <h2>Features</h2><br />
 
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
@@ -131,10 +133,6 @@
           </div>
         </div>
       </div>
-    </div><br />
-
-    <div class="d-grid gap-2 col-6 mx-auto">
-    <a type="button" class="btn btn-outline-dark" href="{{ url_for('index') }}">Home</a>
-    </div><br />
+    </div>
 
 {% endblock %}

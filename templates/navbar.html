@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-lg" style="background-color: #92b5e8;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{ url_for('index') }}">Properties Prediction App</a>
+    <a class="navbar-brand" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Properties Prediction App
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
