@@ -8,13 +8,13 @@
 <body>
     <h5>Thanks for submitting your property!</h5><br />
     <h2>The Predicted price is <strong> {{ prediction }} </strong></h2><br />
-    <div style="background-color: #f5f5f5; padding: 10px;">
+    <div class="border border-secondary" style="background-color: #92b5e8; padding: 10px;">
     <h3><strong>{{ street }} {{ number_in_street }}, {{ city_area }}, {{ city }}</strong></h3>
         <h5><strong>{{ prop_type }}</strong> עם <strong>{{ room_number }}</strong> חדרים בשטח של <strong>{{ area }}</strong> מ"ר</h5>
         <p>{{ description }}</p>
     </div><br />
     <p><u><strong>Additional Features:</strong></u></p>
-    <div style="display: flex; background-color: #f5f5f5; padding: 10px;">
+    <div class="border border-secondary" style="display: flex; background-color: #92b5e8; padding: 10px;">
         <div style="width: 50%;">
             <p><strong>Elevator:</strong> {% if hasElevator %}Yes{% else %}No{% endif %}</p>
             <p><strong>Parking:</strong> {% if hasParking %}Yes{% else %}No{% endif %}</p>
@@ -33,7 +33,7 @@
     </div>
     <br />
     <p><u><strong>Other Details:</strong></u></p>
-    <div style="display: flex; background-color: #f5f5f5; padding: 10px;">
+    <div class="border border-secondary" style="display: flex; background-color: #92b5e8; padding: 10px;">
         <div style="width: 50%;">
             <p><strong>Condition:</strong> {{ condition }}</p>
             <p><strong>Entrance Date:</strong> {{ entranceDate }}</p>
