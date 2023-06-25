@@ -74,7 +74,7 @@ def fix_address(address):
     return street, number, area
 
 
-def clean_data(dataset):
+def prepare_data(dataset):
     # Rename columns
     dataset.rename(columns={'hasElevator ': 'hasElevator', 'hasParking ': 'hasParking', 'hasBars ': 'hasBars',
                             'hasStorage ': 'hasStorage', 'condition ': 'condition',

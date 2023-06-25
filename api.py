@@ -4,7 +4,7 @@ from wtforms import StringField, SubmitField, DateField, SelectField, IntegerFie
 from wtforms.validators import DataRequired
 import pickle
 import os
-import Data_Clean
+import clean_data
 
 prop_model = pickle.load(open('properties_model.pkl', 'rb'))
 preprocessor = pickle.load(open('fitted_preprocessor.pkl', 'rb'))
@@ -13,7 +13,6 @@ app = Flask(__name__)
 
 # Secret Key
 app.config['SECRET_KEY'] = "MySecretKey"
-
 
 class PredictForm(FlaskForm):
     city = SelectField("City", choices=[('פתח תקווה', 'פתח תקווה'), ('נתניה', 'נתניה'), ('באר שבע', 'באר שבע'),
@@ -54,7 +53,6 @@ class PredictForm(FlaskForm):
     floor = IntegerField("Property Floor", validators=[DataRequired()])
     total_floors = IntegerField("Out of Floors", validators=[DataRequired()])
     description = StringField("Description", validators=[DataRequired()])
-    # email = EmailField("Email", validators=[DataRequired(), Email()])
     submit = SubmitField("Submit")
 
 
@@ -129,7 +127,7 @@ def prop_prediction():
                                      'entranceDate', 'furniture', 'publishedDays', 'floor',
                                      'total_floors', 'description'])
 
-        prop = Data_Clean.clean_data(prop)
+        prop = clean_data.prepare_data(prop)
         hasShopping = prop.Shopping_Center.values[0]
         hasEducation = prop.Education.values[0]
         processed_prop = preprocessor.transform(prop)
