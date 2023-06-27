@@ -1,17 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
 <title>Properties Prediction App</title>
+<style>
+    .logo {
+        width: 350px;
+        height: auto;
+    }
+    .heading {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .description {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 40px;
+        max-width: 800px;
+    }
 
+</style>
 <div align="center">
-    <h1>Welcome to "Properties Predict App"</h1>
-    <img src="{{url_for('static', filename='logo.png')}}" style="width: 400px; height: auto;" alt="Logo" />
-    <p>
-        This project focuses on predicting property prices using a machine learning model. It includes exploratory data analysis (EDA),
-    </p>
-    <p>
-        preprocessing of the data, training an ElasticNet model, and creating a Flask application for predicting property prices based on user input.
-    </p>
-    <h3>So, Are you ready to start?</h3>
+    <img class="logo" src="{{url_for('static', filename='logo.png')}}" alt="Logo" />
+    <h1 class="heading">Welcome to "Properties Predict App"</h1>
+    <p class="description">
+        Our advanced machine learning model is designed to <b style="color: #0d6efd;">provide accurate estimates</b> of property prices based on various factors.
+        Whether you are a real estate investor, a homeowner, or simply curious about property values, our application offers you <b style="color: #0d6efd;">valuable insights</b> into the housing market.
+        Through a comprehensive process of exploratory data analysis, data preprocessing, and training an ElasticNet model,
+        we have built a robust system that <b style="color: #0d6efd;">leverages the power of machine learning</b> to make predictions.
+        Our user-friendly <b style="color: #0d6efd;">Flask interface</b> allows you to input property details and obtain instant price estimates.
+        Explore the <b style="color: #0d6efd;">predict button</b> to start predicting property prices, learn more about our talented team behind this project,
+        or dive into the project details for a deeper understanding of our methodology.
+        <b style="color: #0d6efd;">Get ready to unlock the potential of property price prediction with our cutting-edge application!</b></p>
     <div style="display: flex; padding: 10px;">
         <div style="width: 33%;">
             <div class="d-grid gap-2 col-6 mx-auto">
@@ -29,6 +49,5 @@
             </div>
         </div>
     </div>
-
 </div>
 {% endblock %}
