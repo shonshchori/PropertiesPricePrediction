@@ -156,10 +156,20 @@
                         {{ form.description.label(class="form-label", for="floatingTextarea2") }}
                         {{ form.description(class="form-control", id="floatingTextarea2", style="height: 100px") }}
                     </div><br />
-                    {{ form.submit(class="btn btn-secondary") }}
+                    <div style="display: flex; padding: 10px;">
+                        <div style="width: 50%;">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                {{ form.submit(class="btn btn-secondary") }}
+                            </div>
+                        </div>
+                        <div style="width: 50%;">
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                <a class="btn btn-secondary" type="button" href="{{ url_for('prop_prediction') }}">Clear</a>
+                            </div>
+                        </div>
+                    </div>
                 </div><br />
             </div>
-
         </form>
 {% endif %}
 </center>

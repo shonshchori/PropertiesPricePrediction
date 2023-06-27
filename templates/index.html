@@ -11,7 +11,24 @@
     <p>
         preprocessing of the data, training an ElasticNet model, and creating a Flask application for predicting property prices based on user input.
     </p>
-
+    <h3>So, Are you ready to start?</h3>
+    <div style="display: flex; padding: 10px;">
+        <div style="width: 33%;">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a class="btn btn-outline-primary btn-lg" type="button" href="{{ url_for('prop_prediction') }}">Predict</a>
+            </div>
+        </div>
+         <div style="width: 33%;">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a class="btn btn-outline-primary btn-lg" type="button" href="{{ url_for('about_us') }}">The Team</a>
+            </div>
+        </div>
+        <div style="width: 33%;">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a class="btn btn-outline-primary btn-lg" type="button" href="{{ url_for('about_the_project') }}">The Project</a>
+            </div>
+        </div>
+    </div>
 
 </div>
 {% endblock %}
